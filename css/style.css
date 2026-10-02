@@ -5,17 +5,19 @@
 }
 
 :root {
-    --color-bg: #000000;
-    --color-surface: #141414;
-    --color-text: #f5f5f7;
-    --color-text-muted: #86868b;
-    --color-primary: #d71921;
-    --color-border: #2c2c2e;
+  --color-bg: #ffffff;
+  --color-section-bg: #f5f5f7;
+  --color-surface: #ffffff;
+  --color-surface-hover: #eeeeee;
+  --color-text: #1d1d1f;
+  --color-text-muted: #6e6e73;
+  --color-primary: #d71921;
+  --color-border: #e0e0e0;
 
-
-    --font-body: 'Inter', sans-serif;
-    --font-mono: 'Space Mono', monospace;
+  --font-body: 'Inter', sans-serif;
+  --font-mono: 'Space Mono', monospace;
 }
+
 body {
   font-family: var(--font-body);
   background-color: var(--color-bg);
@@ -33,34 +35,42 @@ a {
   text-decoration: none;
 }
 
-.hero{
-    display: flex;
-    min-height: 100vh;
-    flex-direction: column;
-    align-items: center;
-    justify-content: center;
+.hero {
+  display: flex;
+  min-height: 100vh;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  background-color: var(--color-section-bg);
 }
 
-.events{
-    display: flex;
-    flex-wrap: wrap;
-    justify-content: center;
-    gap: 1.5rem;
-    padding: 4rem 2rem;
+.events {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  gap: 1.5rem;
+  padding: 4rem 2rem;
+  background-color: var(--color-bg);
 }
 
-.events h2{
-    flex-basis: 100%;
+.events h2 {
+  flex-basis: 100%;
 }
 
-.event-card{
-    background-color: var(--color-surface);
-    border: 1px solid var(--color-border);
-    border-radius: 12px;
-    padding: 1.5rem;       
-    flex-grow: 1;
-    flex-shrink: 1;
-    flex-basis: 18rem;
-    max-width: 26rem;
+.event-card {
+  background-color: var(--color-surface);
+  border: 1px solid var(--color-border);
+  border-radius: 12px;
+  padding: 1.5rem;
+  flex-grow: 1;
+  flex-shrink: 1;
+  flex-basis: 18rem;
+  max-width: 26rem;
+  transition: transform 0.2s ease, box-shadow 0.2s ease, background-color 0.2s ease;
+}
 
+.event-card:hover {
+  transform: scale(1.03);
+  border-color: var(--color-primary);
+  box-shadow: 0 8px 24px rgba(215, 25, 33, 0.2);
 }
