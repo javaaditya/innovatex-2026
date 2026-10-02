@@ -53,6 +53,7 @@ a {
 }
 
 .hero {
+    padding-top: 4.5rem;
   display: flex;
   min-height: 100vh;
   flex-direction: column;
@@ -99,7 +100,7 @@ a {
     background-color: var(--color-primary);
     transform: scaleY(0);
     transform-origin: bottom;
-    transition:transform 0.3sease;
+    transition:transform 0.3s ease;
 }
 .event-card:hover {
   transform: translateY(-0.375rem);
@@ -116,4 +117,156 @@ a {
 
 .event-card:hover .event-index {
   color: var(--color-primary);
+}
+
+
+.timeline{
+    position: relative;
+    margin-top: 2rem;
+}
+
+.timeline::before{
+    content:"";
+    position:absolute;
+    top:0;
+    bottom:0;
+    left:0.375rem;
+    width: 1px;
+    background-color: var(--color-border);
+}
+
+.timeline-item{
+    position:relative;
+    padding:1.25rem 0 1.25rem 2.5rem;
+    cursor: pointer;
+}
+
+.timeline-item::before{
+    content:"";
+    position: absolute;
+    left:0;
+    top: 1.5rem;
+    width: 0.75rem;
+    height: 0.75rem;
+    border-radius:50%;
+    border:1px solid var(--color-text-muted);
+    background-color: var(--color-bg);
+    transition: transform 0.25s ease, background-color 0.25s ease, border-color 0.25s,box-shadow 0.25s ease;
+}
+
+.timeline-item h3, .timeline-item .label-mono{
+    transition: color 0.25s ease;
+}
+
+.timeline-item:hover::before{
+    transform: scale(1.6);
+    background-color: var(--color-white);
+    border-color: var(--color-white);
+    box-shadow: 0 0 0.75rem rgba(255,255,255,0.4);
+}
+
+.timeline-item:hover h3, .timeline-item:hover .label-mono{
+    color: var(--color-white);
+}
+
+.timeline-item:hover .highlight-mono {
+  color: var(--color-primary);
+}
+
+.schedule{
+    padding: 4rem 2rem;
+}
+
+.schedule-day{
+    margin-bottom: 4rem;
+}
+
+.schedule-day:last-child{
+    margin-bottom: 0;
+}
+
+.about{
+    padding: 4rem 2rem;
+}
+
+
+header{
+    position: fixed;
+    top: 0;
+    left:0;
+    width:100%;
+    z-index: 100;
+    background-color: rgba(14,14,14,0.6);
+    backdrop-filter: blur(12px);
+    -webkit-backdrop-filter: blur(12px);
+    border-bottom: 1px solid var(--color-border);
+}
+
+nav {
+    /* position; */
+    display: flex;
+    justify-content: center;
+    gap: 2rem;
+    padding: 1.25rem 0;
+}
+
+nav a {
+    font-family: var(--font-mono);
+    font-size: 0.85rem;
+    text-transform: uppercase;
+    letter-spacing: 0.05em;
+    color: var(--color-text-secondary);
+    transition: color 0.2s ease, transform 0.2s ease;
+    display: inline-block;
+}
+
+nav a:hover {
+    color: var(--color-white);
+    transform: scale(1.1);
+}
+
+.timeline-item summary {
+  list-style: none;
+  cursor: pointer;
+}
+.timeline-item summary::-webkit-details-marker {
+  display: none;
+}
+
+.timeline-item .event-reveal {
+  overflow: hidden;
+  max-height: 0;
+  opacity: 0;
+  transition: max-height 0.3s ease, opacity 0.3s ease;
+}
+.timeline-item[open] .event-reveal {
+  max-height: 24rem;
+  opacity: 1;
+  margin-top: 0.75rem;
+}
+
+.event-reveal .label-mono {
+  display: block;
+  margin-top: 0.4rem;
+}
+.highlight-mono {
+  transition: color 0.2s ease;
+}
+.btn-cta {
+  display: inline-block;
+  margin-top: 0.75rem;
+  padding: 0.6rem 1.25rem;
+  border: 1px solid var(--color-primary);
+  color: var(--color-primary);
+  font-family: var(--font-mono);
+  font-size: 0.8rem;
+  text-transform: uppercase;
+  letter-spacing: 0.05em;
+  border-radius: 6px;
+  transition: background-color 0.2s ease, color 0.2s ease;
+}
+
+.btn-cta:hover {
+  background-color: var(--color-primary);
+  color: var(--color-void);
 }
