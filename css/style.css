@@ -308,3 +308,39 @@ nav a:hover {
 .gallery-item:hover img{
   transform: scale(1.2);
 }
+
+.countdown {
+  display: flex;
+  gap: 1.5rem;
+  margin: 1rem 0;
+}
+
+.countdown-block {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 0.25rem;
+}
+
+.countdown-block span:first-child {
+  font-family: var(--font-mono);
+  font-size: 2.5rem;
+  font-weight: 700;
+  color: var(--color-white);
+}
+
+
+.countdown-block + .countdown-block {
+  position: relative;
+}
+
+.countdown-block + .countdown-block::before {
+  content: ":";
+  position: absolute;
+  left: -1.5rem;
+  top: -0.25rem;
+  font-family: var(--font-mono);
+  font-size: 2.5rem;
+  font-weight: 700;
+  color: var(--color-text-muted);
+}
