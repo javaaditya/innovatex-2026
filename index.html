@@ -193,12 +193,59 @@
                 </div>
             </div>
         </section>
-        <section id="register">
+        <section id="register" class="register">
             <h2>Register</h2>
+            <form id="registeration-form" novalidate>
+                <div class="form-group">
+                    <label for="name">Full Name</label>
+                    <input type="text" id="name" name="name" required>
+                </div>
+                <div class="form-group">
+                    <label for="email">Email</label>
+                    <input type="email" id="email" name="email" required>
+                </div>
+
+                <div class="form-group">
+                    <label for="phone">Mobile Number</label>
+                    <input type="tel" id="phone" name="phone" required>
+                </div>
+                
+                <div class="form-group">
+                    <label for="email">College / Organisation</label>
+                    <input type="text" id="college" name="college" required>
+                </div>
+                
+                <div class="form-group">
+                    <label>Events</label>
+                    <div class="checkbox-group">
+                        <label class="checkbox-label">
+                        <input type="checkbox" name="events" value="shark-tank">
+                        Shark Tank: NSUT Edition
+                        </label>
+                        <label class="checkbox-label">
+                        <input type="checkbox" name="events" value="market-mayhem">
+                        Market Mayhem
+                        </label>
+                        <label class="checkbox-label">
+                        <input type="checkbox" name="events" value="founder-frequency">
+                        Founder Frequency
+                        </label>
+                        <label class="checkbox-label">
+                        <input type="checkbox" name="events" value="bizblitz">
+                        BizBlitz
+                        </label>
+                        <label class="checkbox-label">
+                        <input type="checkbox" name="events" value="networking-night">
+                        Networking Night
+                        </label>
+                    </div>
+                </div>
+                 <button type="submit" class="btn-cta">Submit Registration</button>
+            </form>
         </section>
     </main>
     <footer><p>© 2026 InnovateX</p></footer>    
-
+    <script src="js/validation.js"></script>
     <script src="js/countdown.js"></script>
 </body>
 </html>
