@@ -3,7 +3,7 @@
 A responsive landing page for InnovateX 2026, NSUT's entrepreneurship summit, built as part of the E-Cell recruitment technical assignment.
 
 ## Live Demo
-[Add your Vercel URL here after deployment]
+(https://innovatex-2026-sand.vercel.app/)
 
 ## Features
 - Responsive hero section with live JS countdown timer
